@@ -838,4 +838,35 @@ h4 {
   }
 }
 
+.studies {
+  padding: 70px 60px;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-large);
+}
+.studies__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.studies__item {
+  --studiesItemPaddingX: 64px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.studies__item:not(:first-child) {
+  padding-left: var(--studiesItemPaddingX);
+}
+.studies__item:not(:last-child) {
+  padding-right: var(--studiesItemPaddingX);
+  border-right: 1px solid var(--color-light);
+}
+.studies__item__link {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
 /*# sourceMappingURL=styles.css.map */
