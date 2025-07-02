@@ -1,0 +1,146 @@
+.footer {
+  @include mobile {
+    padding-inline: 0;
+  }
+
+  &__inner {
+    padding: 55px 60px 50px;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+
+    @include mobile-above {
+      border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 37px;
+      padding: 50px var(--container-padding-x) 30px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 66px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 37px;
+    }
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+
+      @include mobile {
+        flex-direction: column;
+        row-gap: 15px;
+      }
+    }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: underline;
+      height: 30px;
+
+      @include hover {
+        color: var(--color-accent);
+      }
+
+      @include mobile {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__soc1als {
+
+    @include mobile {
+      order: 1;
+      padding-bottom: 37px;
+      border-bottom: 1px solid var(--color-light);
+      width: 100%;
+      margin-inline: auto;
+    }
+
+
+  }
+
+  &__body {
+    display: flex;
+    column-gap: 154px;
+    justify-content: space-between;
+
+    @include mobile-above {
+      margin-bottom: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid var(--color-light);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      row-gap: inherit;
+    }
+
+    @include mobile-s {
+      width: 100%;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+
+    &-title {
+      @include fluid-text(20, 18);
+
+      color: var(--color-dark);
+      margin-bottom: 27px;
+    }
+
+    &-body {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__extra {
+    display: flex;
+    column-gap: 40px;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 15px;
+      align-items: center;
+      order: 2;
+    }
+  }
+
+  &__privacy-policy-link {
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+}
